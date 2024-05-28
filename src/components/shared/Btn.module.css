@@ -1,0 +1,30 @@
+button.btn {
+    display: flex;
+    height: 48px;
+    padding: 0px 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background: var(--Theme-Accent, #5EDCD4);
+    margin-top: 32px;
+    width: 100%;
+    direction: rtl;
+}
+button.sec{
+    direction: rtl;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #5EDCD4;
+    width: fit-content;
+}
+button.dis{
+    background: #00645C;
+}
+a.btn{
+    flex: 1;
+}
+a.btn.sec{
+    display: flex;
+    flex: none;
+    width: fit-content !important;
+}

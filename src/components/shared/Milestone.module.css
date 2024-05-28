@@ -1,0 +1,47 @@
+.milestones{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 24px;
+    color: white;
+    direction: rtl;
+}
+.milestones .row{
+    gap: 24px;
+}
+.mile{
+    background-color: #191919;
+    border-radius: 8px;
+    padding: 16px;
+    flex: 1;
+}
+.xhead{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.xhead span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff12;
+    height: 36px;
+    width: 36px;
+    max-width: 36px;
+    border-radius: 24px;
+
+}
+.xrow{
+    display: flex;
+    padding-top: 16px;
+    padding-bottom: 8px;
+    align-items: center;
+    border-top: 1px solid #4A4A4A;
+}
+
+
+@media(max-width: 768px){
+    .milestones .row{
+        flex-direction: column;
+    }
+}

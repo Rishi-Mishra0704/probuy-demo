@@ -1,0 +1,87 @@
+.card {
+    flex: 1;
+    display: flex;
+    padding: 32px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+    border-radius: 32px;
+    border: 1px solid var(--b16);
+    text-align: right;
+    border-radius: 50px;
+    border: 1px solid var(--Theme-Primary-soft, rgba(24, 107, 232, 0.40));
+    background: var(--Theme-Primary-Soft-2, rgba(24, 107, 232, 0.08));
+    direction: rtl;
+
+}
+
+.card:hover{
+    background-color: #042352;
+}
+.card a {
+    width: 100%;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.head span {
+    color: var(--brandMain);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.head h3 {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 32px;
+    /* 133.333% */
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-self: stretch;
+}
+
+.point {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+}
+button.md {
+    display: flex;
+    height: 48px;
+    padding: 0px 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background: var(--Theme-Accent, #5EDCD4);
+    margin-top: 32px;
+    width: 100%;
+}
+button.md:hover{
+    background-color: #fff;
+}
+
+@media(max-width: 768px) {
+    .card {
+        align-items: center;
+        text-align: center;
+        padding: 32px !important;
+    }
+
+    .body {
+        text-align: right;
+    }
+
+}
