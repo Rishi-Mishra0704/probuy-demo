@@ -6,8 +6,6 @@
 }
 body{
     scroll-behavior: smooth;
-    background-color: #222;
-    background-image: url('/assets/imgs/bg.png');
     color: #fff;
 }
 .container {

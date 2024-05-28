@@ -2,11 +2,17 @@ import { useState } from "react";
 import Btn from "../shared/Btn";
 import Milestone from "../shared/Milestone";
 import styles from "./Review2Confirm.module.css";
+import Confirm from "../Confirm";
 const Review2Confirm = ({ plan = "" }) => {
   const [isConfirmed, setIsConfirmed] = useState(false);
-
+  const [showConfirm, setShowConfirm] = useState(false);
   const confirm = () => {
     setIsConfirmed(!isConfirmed);
+  };
+  const handleConfirmClick = () => {
+    if (isConfirmed) {
+      setShowConfirm(true);
+    }
   };
 
   return (
@@ -57,12 +63,13 @@ const Review2Confirm = ({ plan = "" }) => {
         الموافقه على الشروط والاحكام
       </div>
       <div className={styles.actions}>
-        <Btn name="رجوع" type="sec" />
+        <Btn name="رجوع" type="sec" action={() => setShowConfirm(false)} />
         <Btn
           name="تاكيد الدفع والطلب"
-          dir={isConfirmed ? "/confirm" : "/review1"}
+          action={handleConfirmClick}
         />
       </div>
+      {showConfirm && <Confirm />}
     </div>
   );
 };
