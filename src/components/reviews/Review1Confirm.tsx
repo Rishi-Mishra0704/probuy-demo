@@ -2,8 +2,14 @@ import { useState } from "react";
 import Btn from "../shared/Btn";
 import styles from "./Review1Confirm.module.css";
 import Confirm from "../Confirm";
+import Modal from "../layout/Modal";
 
-const Review1Confirm = ({ plan = "" }) => {
+interface Review1ConfirmProps {
+  plan?: string;
+  onClose: () => void;
+}
+
+const Review1Confirm:React.FC<Review1ConfirmProps>  = ({ plan = "" , onClose}) => {
   const [isConfirmed, setIsConfirmed] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
 
@@ -41,7 +47,9 @@ const Review1Confirm = ({ plan = "" }) => {
           action={handleConfirmClick}
         />
       </div>
-      {showConfirm && <Confirm />}
+      <Modal isOpen={showConfirm} onClose={onClose}>
+        <Confirm onClose={onClose}/>
+      </Modal>
     </div>
   );
 };

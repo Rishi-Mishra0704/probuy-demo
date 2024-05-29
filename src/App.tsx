@@ -56,10 +56,10 @@ const App = () => {
           )}
         </Modal>
         <Modal isOpen={state === "review1"} onClose={() => setState("default")}>
-          <Review1Confirm />
+          <Review1Confirm onClose={() => setState("default")}/>
         </Modal>
         <Modal isOpen={state === "review2"} onClose={() => setState("default")}>
-          <Review2Confirm />
+          <Review2Confirm state={state} onClose={() => setState("default")} />
         </Modal>
       </div>
     </>

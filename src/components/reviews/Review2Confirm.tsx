@@ -3,7 +3,19 @@ import Btn from "../shared/Btn";
 import Milestone from "../shared/Milestone";
 import styles from "./Review2Confirm.module.css";
 import Confirm from "../Confirm";
-const Review2Confirm = ({ plan = "" }) => {
+import Modal from "../layout/Modal";
+
+interface Review2ConfirmProps {
+  plan?: string;
+  state?: string;
+  onClose: () => void;
+}
+
+const Review2Confirm: React.FC<Review2ConfirmProps> = ({
+  plan,
+  state,
+  onClose,
+}) => {
   const [isConfirmed, setIsConfirmed] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
   const confirm = () => {
@@ -64,12 +76,11 @@ const Review2Confirm = ({ plan = "" }) => {
       </div>
       <div className={styles.actions}>
         <Btn name="رجوع" type="sec" action={() => setShowConfirm(false)} />
-        <Btn
-          name="تاكيد الدفع والطلب"
-          action={handleConfirmClick}
-        />
+        <Btn name="تاكيد الدفع والطلب" action={handleConfirmClick} />
       </div>
-      {showConfirm && <Confirm />}
+      <Modal isOpen={showConfirm} onClose={onClose}>
+        <Confirm onClose={onClose}/>
+      </Modal>
     </div>
   );
 };
