@@ -1,14 +1,17 @@
-.container{
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    gap: 32px;
-    padding: 16px;
+    gap: 16px; /* Reduce gap to fit more content */
+    padding: 8px; /* Reduce padding to fit more content */
+    width: 100%; /* Ensure it takes full width of the modal */
 }
-.container img{
-    max-width: 500px;
-    width: 100%;
-    height: fit-content;
+
+/* Image inside the container */
+.container img {
+    max-width: 100%; /* Ensure image fits within container */
+    width: auto;
+    height: auto; /* Allow height to adjust automatically */
+    border-radius: 4px; /* Add slight rounding for aesthetics */
 }
