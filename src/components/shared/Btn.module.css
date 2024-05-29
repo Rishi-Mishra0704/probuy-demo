@@ -9,6 +9,7 @@ button.btn {
     margin-top: 32px;
     width: 100%;
     direction: rtl;
+    cursor: pointer;
 }
 button.sec{
     direction: rtl;
@@ -16,6 +17,7 @@ button.sec{
     color: #fff;
     border: 1px solid #5EDCD4;
     width: fit-content;
+    cursor: pointer;
 }
 button.dis{
     background: #00645C;
