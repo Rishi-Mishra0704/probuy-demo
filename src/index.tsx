@@ -14,3 +14,8 @@ root.render(
   </BrowserRouter>,
   </React.StrictMode>
 );
+
+
+const ProbuyDemoComponent = App;
+
+export default ProbuyDemoComponent;

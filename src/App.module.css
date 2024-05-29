@@ -26,21 +26,21 @@ body{
     display: flex;
     justify-content: center;
     width: 25%;
-    direction: rtl;
 }
 .PaymentMethods{
     display: flex;
-    width: 50%;
+    width: 100%;
 
 }
 .PaymentMethods img {
     display: flex;
-   width: 10%;
+   width: 50%;
    flex: 1;
     padding: 8px;
     cursor: pointer;
 
 }
+
 
 section{
     padding: 88px 108px;
